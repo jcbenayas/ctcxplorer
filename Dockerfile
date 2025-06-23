@@ -12,6 +12,9 @@ RUN apt-get update && \
 # 2. Crear usuario no-root para ejecutar la app
 RUN useradd -m ctcxplorer
 WORKDIR /home/ctcxplorer
+# Matplotlib necesita un directorio de caché escribible
+ENV MPLCONFIGDIR=/home/ctcxplorer/.cache/matplotlib
+RUN mkdir -p $MPLCONFIGDIR && chown -R ctcxplorer:ctcxplorer $MPLCONFIGDIR
 
 # 3. Copiar código y dependencias
 COPY requirements.txt .
