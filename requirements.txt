@@ -1,0 +1,6 @@
+# Python ≥3.9
+duckdb>=0.9
+pandas>=2.0
+matplotlib>=3.7      # Solo para el gráfico de circuitos
+plotly>=5.16         # Interactividad en los gráficos
+gradio>=4.0          # UI web
