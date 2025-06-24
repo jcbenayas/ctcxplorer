@@ -557,7 +557,7 @@ with gr.Blocks(title="Explorador de logs de CTC") as demo:
 
 # Iniciar la aplicación
 if __name__ == "__main__":
-    interfaz.launch(
+    demo.launch(
         server_name="0.0.0.0",
         server_port=7860
     )
